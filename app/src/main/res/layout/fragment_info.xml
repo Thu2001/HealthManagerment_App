@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".donthuoc.viewThuoc">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="144dp"
+        android:background="@drawable/custom_background_1"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:src="@drawable/logo2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ten benh nhan"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ngay Thang nam sinh"
+                android:textColor="@color/black"
+                android:textSize="10dp"
+
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_thongtincanhan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>
