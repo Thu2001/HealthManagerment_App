@@ -49,8 +49,8 @@ public class DonThuocAdapter extends RecyclerView.Adapter<DonThuocAdapter.ViewHo
 
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView mTextName;
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        public TextView mTextName;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
