@@ -15,9 +15,6 @@
             android:id="@+id/action_login2_to_register"
             app:destination="@id/register" />
         <action
-            android:id="@+id/action_login2_to_mobile_navigation"
-            app:destination="@id/mobile_navigation" />
-        <action
             android:id="@+id/action_login2_to_mainScreen"
             app:destination="@id/mainScreen" />
     </fragment>
@@ -31,11 +28,10 @@
         android:name="com.example.healthmanagerment_app.register.Register"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
-    <include app:graph="@navigation/mobile_navigation" />
     <activity
         android:id="@+id/mainScreen"
         android:name="com.example.healthmanagerment_app.mainScreen.mainScreen"
         android:label="app_bar_main_screen"
-        tools:layout="@layout/app_bar_main_screen" />
+        tools:layout="@layout/activity_main_screen" />
 
 </navigation>
