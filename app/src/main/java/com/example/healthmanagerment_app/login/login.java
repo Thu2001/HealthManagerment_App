@@ -17,6 +17,8 @@ import android.widget.TextView;
 import com.example.healthmanagerment_app.R;
 import com.example.healthmanagerment_app.api.API;
 import com.example.healthmanagerment_app.api.RetrofitClient;
+import com.example.healthmanagerment_app.model.Token;
+import com.example.healthmanagerment_app.model.User;
 import com.example.healthmanagerment_app.model.data;
 
 import retrofit2.Call;
@@ -38,7 +40,24 @@ public class login extends Fragment {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               Login("1","1",view);
+                User user = new User();
+                user.setAccount("1");
+                user.setPassword("1");
+                RetrofitClient retrofitClient = new RetrofitClient();
+                retrofitClient.setBase_Url("http://192.168.5.58:5000/");
+                API methods = retrofitClient.getRetrofit().create(API.class);
+                Call<Token> call = methods.login(user);
+                call.enqueue(new Callback<Token>() {
+                    @Override
+                    public void onResponse(Call<Token> call, Response<Token> response) {
+                        Navigation.findNavController(view).navigate(R.id.action_login2_to_mainScreen);
+                    }
+
+                    @Override
+                    public void onFailure(Call<Token> call, Throwable t) {
+
+                    }
+                });
             }
         });
         TextView register = (TextView) view.findViewById(R.id.register_user);
@@ -53,22 +72,7 @@ public class login extends Fragment {
     }
     public Boolean Login(String Acc,String Pas, View view){
         Boolean check =false;
-        API methods = RetrofitClient.getRetrofit().create(API.class);
-        Call<data> call = methods.getdata();
-        call.enqueue(new Callback<data>() {
-            @Override
-            public void onResponse(Call<data> call, Response<data> response) {
-                data dt = response.body();
-                if(dt.data.get(1)!=null){
-                    Navigation.findNavController(view).navigate(R.id.action_login2_to_mainScreen);
-                }
-            }
 
-            @Override
-            public void onFailure(Call<data> call, Throwable t) {
-
-            }
-        });
         return false;
     }
 }

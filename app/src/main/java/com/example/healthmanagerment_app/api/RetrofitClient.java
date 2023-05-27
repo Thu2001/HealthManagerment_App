@@ -8,11 +8,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
     private static Retrofit retrofit;
-    private static String  Base_Url="http://192.168.128.128:3002/";
+    private static String  Base_Url="http://192.168.5.58:3000/";
     public static String getBase_Url(){
         return Base_Url;
     }
-    public static void setBase_Url(String base_Url){
+    public void setBase_Url(String base_Url){
         Base_Url=base_Url;
 
     }

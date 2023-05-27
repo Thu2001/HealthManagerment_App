@@ -4,6 +4,6 @@ import java.util.ArrayList;
 
 public class data {
     public String message;
-    public ArrayList<user> data;
+    public ArrayList<User> data;
 }
 
