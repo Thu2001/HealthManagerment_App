@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".mainScreen.info.info">
+    tools:context=".mainScreen.info.uploadinfo.uploadinfo">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,16 +22,16 @@
             android:gravity="center"
             android:textSize="20dp"
             android:textStyle="bold"/>
-
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="@id/panner1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="100dp"
         android:id="@+id/pannen2"
         android:background="@drawable/custom_bable1">
+
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -43,11 +44,12 @@
                 android:text="Ten:"
                 android:textStyle="bold"/>
             <TextView
+                android:hint=" nhap ten"
                 android:layout_marginLeft="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="khong khong biet ten"
                 android:textStyle="bold"/>
+
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
@@ -64,7 +66,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="khong khong biet ten"
+                android:hint=" nhap tuoi"
                 android:textStyle="bold"/>
 
         </LinearLayout>
@@ -83,7 +85,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="khong khong biet ten"
+                android:hint=" nhap ngay thang nam sinh"
                 android:textStyle="bold"/>
 
         </LinearLayout>
@@ -102,7 +104,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="khong co  "
+                android:hint=" nhap cong viec"
                 android:textStyle="bold"/>
 
         </LinearLayout>
@@ -121,7 +123,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="khong co  "
+                android:hint=" nhap dia chi"
                 android:textStyle="bold"/>
 
         </LinearLayout>
@@ -140,7 +142,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="000000000000  "
+                android:hint=" nhap so dien thoai"
                 android:textStyle="bold"/>
 
         </LinearLayout>
@@ -159,7 +161,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="khong khong biet ten"
+                android:hint=" nhap chieu cao"
                 android:textStyle="bold"/>
 
         </LinearLayout>
@@ -178,7 +180,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="khong khong biet ten"
+                android:hint=" nhap can nang"
                 android:textStyle="bold"/>
 
         </LinearLayout>
@@ -197,7 +199,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="khong khong co"
+                android:hint=" nhap benh ly (neu co)"
                 android:textStyle="bold"/>
 
         </LinearLayout>
@@ -216,7 +218,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="khong co benh "
+                android:hint=" nhap benh di truyen (neu co)"
                 android:textStyle="bold"/>
 
         </LinearLayout>
@@ -232,10 +234,10 @@
                 android:text="tieu su:"
                 android:textStyle="bold"/>
             <TextView
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="@dimen/material_emphasis_disabled"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="khong co  "
+                android:hint=" nhap tieu su benh (neu co)"
                 android:textStyle="bold"/>
 
         </LinearLayout>
@@ -245,7 +247,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp">
             <Button
-                android:layout_marginLeft="200dp"
+                android:layout_marginLeft="230dp"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:text="Cap nhat TT"/>
@@ -254,4 +256,4 @@
 
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>
