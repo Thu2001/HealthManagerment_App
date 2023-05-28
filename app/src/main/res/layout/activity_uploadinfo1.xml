@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_bable1"
+    tools:context=".mainScreen.info.uploadinfo.uploadinfo1"
+    android:layout_marginTop="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/custom_background_1"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        android:id="@+id/panner1">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Thong tin ca nhan"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        >
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="Ten:"
+            android:textStyle="bold"/>
+        <TextView
+            android:hint=" nhap ten"
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        >
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="Tuoi:"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:hint=" nhap tuoi"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        >
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="Ngay sinh:"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:hint=" nhap ngay thang nam sinh"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        >
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="cong viec:"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:hint=" nhap cong viec"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        >
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="dia chi:"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:hint=" nhap dia chi"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        >
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="lien he:"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:hint=" nhap so dien thoai"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        >
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="Chieu cao:"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:hint=" nhap chieu cao"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        >
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="Can nang:"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:hint=" nhap can nang"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        >
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="benh ly:"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:hint=" nhap benh ly (neu co)"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        >
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="di chuyen:"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:hint=" nhap benh di truyen (neu co)"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        >
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="tieu su:"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:hint=" nhap tieu su benh (neu co)"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <Button
+            android:layout_marginLeft="50dp"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Cap nhat TT"/>
+
+    </LinearLayout>
+
+</LinearLayout>

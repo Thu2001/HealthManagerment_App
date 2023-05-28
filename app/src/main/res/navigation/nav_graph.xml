@@ -30,5 +30,19 @@
         android:label="app_bar_main_screen"
         tools:layout="@layout/activity_main_screen" >
     </activity>
+    <fragment
+        android:id="@+id/info2"
+        android:name="com.example.healthmanagerment_app.mainScreen.info.info"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_info2_to_uploadinfo"
+            app:destination="@id/uploadinfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadinfo"
+        android:name="com.example.healthmanagerment_app.mainScreen.info.uploadinfo.uploadinfo"
+        android:label="fragment_uploadinfo"
+        tools:layout="@layout/fragment_uploadinfo" />
 
 </navigation>

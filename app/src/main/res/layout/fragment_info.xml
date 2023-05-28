@@ -28,7 +28,7 @@
         android:layout_marginTop="100dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="50dp"
         android:id="@+id/pannen2"
         android:background="@drawable/custom_bable1">
         <LinearLayout
@@ -249,7 +249,8 @@
             android:layout_width="match_parent"
             android:layout_height="50dp">
             <Button
-                android:layout_marginLeft="200dp"
+                android:id="@+id/captt"
+                android:layout_marginLeft="50dp"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:text="Cap nhat TT"/>
