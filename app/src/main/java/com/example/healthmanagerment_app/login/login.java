@@ -3,10 +3,7 @@ package com.example.healthmanagerment_app.login;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.NavDirections;
 import androidx.navigation.Navigation;
-import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,9 +14,9 @@ import android.widget.TextView;
 import com.example.healthmanagerment_app.R;
 import com.example.healthmanagerment_app.api.API;
 import com.example.healthmanagerment_app.api.RetrofitClient;
+import com.example.healthmanagerment_app.api.ServerJWT;
 import com.example.healthmanagerment_app.model.Token;
 import com.example.healthmanagerment_app.model.User;
-import com.example.healthmanagerment_app.model.data;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -43,9 +40,7 @@ public class login extends Fragment {
                 User user = new User();
                 user.setAccount("1");
                 user.setPassword("1");
-                RetrofitClient retrofitClient = new RetrofitClient();
-                retrofitClient.setBase_Url("http://192.168.5.58:5000/");
-                API methods = retrofitClient.getRetrofit().create(API.class);
+                API methods = ServerJWT.getRetrofit().create(API.class);
                 Call<Token> call = methods.login(user);
                 call.enqueue(new Callback<Token>() {
                     @Override

@@ -16,7 +16,7 @@ import com.example.healthmanagerment_app.R;
 import com.example.healthmanagerment_app.api.API;
 import com.example.healthmanagerment_app.api.RetrofitClient;
 import com.example.healthmanagerment_app.model.User;
-import com.example.healthmanagerment_app.model.data;
+import com.example.healthmanagerment_app.model.Data;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -47,15 +47,15 @@ public class Register extends Fragment {
                 user.setAccount(acc.getText().toString());
                 user.setPassword(pass.getText().toString());
                 API methods = RetrofitClient.getRetrofit().create(API.class);
-                Call<data> call = methods.registerUser(user);
-                call.enqueue(new Callback<data>() {
+                Call<Data> call = methods.registerUser(user);
+                call.enqueue(new Callback<Data>() {
                     @Override
-                    public void onResponse(Call<data> call, Response<data> response) {
+                    public void onResponse(Call<Data> call, Response<Data> response) {
 
                     }
 
                     @Override
-                    public void onFailure(Call<data> call, Throwable t) {
+                    public void onFailure(Call<Data> call, Throwable t) {
 
                     }
                 });
