@@ -28,6 +28,7 @@
         android:id="@+id/mainScreen"
         android:name="com.example.healthmanagerment_app.mainScreen.mainScreen"
         android:label="app_bar_main_screen"
-        tools:layout="@layout/activity_main_screen" />
+        tools:layout="@layout/activity_main_screen" >
+    </activity>
 
 </navigation>

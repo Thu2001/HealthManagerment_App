@@ -38,7 +38,7 @@ public class viewThuoc extends AppCompatActivity {
         listThuoc.add(new thuoc("Tên Thuốc 4" ,"ngày 3 viên " , "15 viên"));
         listThuoc.add(new thuoc("Tên Thuốc 5" ,"ngày 3 viên " , "15 viên"));
         listThuoc.add(new thuoc("Tên Thuốc 6" ,"ngày 3 viên " , "15 viên"));
-        DonThuocAdapter donthuocAdapter = new DonThuocAdapter(this,listThuoc);
+        ThuocAdapter donthuocAdapter = new ThuocAdapter(this,listThuoc);
         LinearLayoutManager LinearLayoutManager=new LinearLayoutManager(this, RecyclerView.VERTICAL,false);
         rcvthuoc.setLayoutManager(LinearLayoutManager);
         rcvthuoc.setAdapter(donthuocAdapter);
