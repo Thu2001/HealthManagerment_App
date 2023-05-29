@@ -15,6 +15,7 @@
         tools:layout_editor_absoluteY="1dp"
         android:id="@+id/panner1">
         <TextView
+            android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Thong tin ca nhan"
@@ -141,6 +142,7 @@
                 android:text="lien he:"
                 android:textStyle="bold"/>
             <TextView
+                android:id="@+id/phone"
                 android:layout_marginLeft="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
@@ -164,6 +166,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:text="khong khong biet ten"
+                android:id="@+id/height"
                 android:textStyle="bold"/>
 
         </LinearLayout>
@@ -183,6 +186,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:text="khong khong biet ten"
+                android:id="@+id/weight"
                 android:textStyle="bold"/>
 
         </LinearLayout>

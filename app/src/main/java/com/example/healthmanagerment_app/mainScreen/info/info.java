@@ -26,17 +26,22 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class info extends Fragment {
-    TextView name,age,address;
+    TextView name,birthday,age,address,phone,height,weight;
     @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_info, container, false);
         name = view.findViewById(R.id.name);
-        age = view.findViewById(R.id.age);
-        address = view.findViewById(R.id.address);
+//        age = view.findViewById(R.id.age);
+//        birthday = view.findViewById(R.id.birthday);
+//        address = view.findViewById(R.id.address);
+//        phone = view.findViewById(R.id.phone);
+//        height = view.findViewById(R.id.height);
+//        weight = view.findViewById(R.id.weight);
+
         User user = new User();
-        user.setAccount("1");
+        user.setAccount("qwe");
         Log.v("aaaaaaaaa",new Gson().toJson(user));
 
         API methods = RetrofitClient.getRetrofit().create(API.class);
@@ -47,7 +52,12 @@ public class info extends Fragment {
             public void onResponse(Call<Data> call, Response<Data> response) {
                 Data dt = response.body();
                 name.setText(dt.data.get(0).getUserName().toString());
-
+//                age.setText(dt.data.get(0).get);
+//                birthday.setText(dt.data.get(0).getUserDate().toString());
+//                address.setText(dt.data.get(0).getUserAddress().toString());
+//                phone.setText(dt.data.get(0).getUserPhone().toString());
+//                height.setText(dt.data.get(0).getUserHeight().toString());
+//                weight.setText(dt.data.get(0).getUserWeight().toString());
             }
 
             @Override
