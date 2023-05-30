@@ -12,6 +12,30 @@ public class User {
     public Object userHeight;
     public Object userWeight;
     public Object refreshToken;
+    public Object age;
+    public Object getUserJob() {
+        return userJob;
+    }
+
+    public void setUserJob(Object userJob) {
+        this.userJob = userJob;
+    }
+
+    public Object userJob;
+
+
+
+
+
+    public Object getAge() {
+        return age;
+    }
+
+    public void setAge(Object age) {
+        this.age = age;
+    }
+
+
 
     public int getIdUser() {
         return idUser;

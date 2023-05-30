@@ -9,24 +9,38 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="80dp"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:background="@color/DeepSkyBlue"
         android:padding="5dp">
-        <TextView
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/logo2"
+            app:shapeAppearanceOverlay="@style/Circular"
+            app:srcCompat="@drawable/logo2"
+            app:strokeColor="@color/white"
+            app:strokeWidth="3dp"/>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Danh sach don thuoc"
-            android:textSize="25dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chao buoi sang"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_marginStart="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thu"
+                android:textSize="25dp"
 
-            android:textStyle="bold"
-            android:layout_marginLeft="20dp"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="cac don thuoc dang uong "
-            android:textSize="15dp"
-            android:textStyle="bold"
-            android:layout_marginStart="20dp"/>
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"/>
+
+        </LinearLayout>
     </LinearLayout>
 
     <ScrollView

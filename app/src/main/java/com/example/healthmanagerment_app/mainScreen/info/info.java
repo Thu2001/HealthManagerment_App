@@ -26,22 +26,23 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class info extends Fragment {
-    TextView name,birthday,age,address,phone,height,weight;
+    TextView name,birthday,age,address,phone,height,weight,userjob;
     @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_info, container, false);
         name = view.findViewById(R.id.name);
-//        age = view.findViewById(R.id.age);
+        age = view.findViewById(R.id.age);
+//        userjob = view.findViewById(R.id.userJob);
 //        birthday = view.findViewById(R.id.birthday);
-//        address = view.findViewById(R.id.address);
-//        phone = view.findViewById(R.id.phone);
-//        height = view.findViewById(R.id.height);
-//        weight = view.findViewById(R.id.weight);
+        address = view.findViewById(R.id.address);
+        phone = view.findViewById(R.id.phone);
+        height = view.findViewById(R.id.height);
+        weight = view.findViewById(R.id.weight);
 
         User user = new User();
-        user.setAccount("qwe");
+        user.setAccount("anh");
         Log.v("aaaaaaaaa",new Gson().toJson(user));
 
         API methods = RetrofitClient.getRetrofit().create(API.class);
@@ -52,12 +53,13 @@ public class info extends Fragment {
             public void onResponse(Call<Data> call, Response<Data> response) {
                 Data dt = response.body();
                 name.setText(dt.data.get(0).getUserName().toString());
-//                age.setText(dt.data.get(0).get);
+                age.setText(dt.data.get(0).getAge().toString());
+//                userjob.setText(dt.data.get(0).getUserJob().toString());
 //                birthday.setText(dt.data.get(0).getUserDate().toString());
-//                address.setText(dt.data.get(0).getUserAddress().toString());
-//                phone.setText(dt.data.get(0).getUserPhone().toString());
-//                height.setText(dt.data.get(0).getUserHeight().toString());
-//                weight.setText(dt.data.get(0).getUserWeight().toString());
+                address.setText(dt.data.get(0).getUserAddress().toString());
+                phone.setText(dt.data.get(0).getUserPhone().toString());
+                height.setText(dt.data.get(0).getUserHeight().toString());
+                weight.setText(dt.data.get(0).getUserWeight().toString());
             }
 
             @Override

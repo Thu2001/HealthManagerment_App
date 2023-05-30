@@ -29,20 +29,23 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="20dp"
         >
         <TextView
             android:layout_marginLeft="15dp"
             android:layout_width="80dp"
             android:layout_height="20dp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
             android:text="Ten:"
             android:textStyle="bold"/>
-        <TextView
-            android:hint=" nhap ten"
-            android:layout_marginLeft="15dp"
+        <EditText
+            android:id="@+id/uploadname"
             android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:textStyle="bold"/>
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+
+            />
 
     </LinearLayout>
     <LinearLayout
@@ -197,25 +200,7 @@
             android:textStyle="bold"/>
 
     </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        >
-        <TextView
-            android:layout_marginLeft="15dp"
-            android:layout_width="80dp"
-            android:layout_height="20dp"
-            android:text="di chuyen:"
-            android:textStyle="bold"/>
-        <TextView
-            android:layout_marginLeft="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:hint=" nhap benh di truyen (neu co)"
-            android:textStyle="bold"/>
 
-    </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"

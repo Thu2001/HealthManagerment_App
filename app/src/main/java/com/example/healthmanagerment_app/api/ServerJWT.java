@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ServerJWT {
     private static Retrofit retrofit;
-    private static String  Base_Url="http://192.168.111.10:5000/";
+    private static String  Base_Url="http://192.168.111.3:5000/";
     public static String getBase_Url(){
         return Base_Url;
     }
