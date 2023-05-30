@@ -1,6 +1,7 @@
 package com.example.healthmanagerment_app.mainScreen.orderDate;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -17,7 +18,9 @@ import android.widget.Toast;
 import com.example.healthmanagerment_app.R;
 import com.example.healthmanagerment_app.api.API;
 import com.example.healthmanagerment_app.api.RetrofitClient;
+import com.example.healthmanagerment_app.mainScreen.info.uploadinfo.uploadinfo1;
 import com.example.healthmanagerment_app.mainScreen.orderDate.dateTimePicker.TimeManagement;
+import com.example.healthmanagerment_app.mainScreen.orderDate.registration.registration;
 import com.example.healthmanagerment_app.model.Data;
 import com.example.healthmanagerment_app.model.Order;
 import com.example.healthmanagerment_app.model.User;
@@ -93,6 +96,12 @@ public class orderDate extends Fragment {
                     }
                 });
                 Toast.makeText(getActivity(),"Đặt lịch thành công",Toast.LENGTH_LONG).show();
+
+
+
+                    Intent intent = new Intent(getActivity(), registration.class);
+                    getActivity().startActivity(intent);
+
             }
         });
 

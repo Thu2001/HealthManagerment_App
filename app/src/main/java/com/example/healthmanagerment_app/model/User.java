@@ -15,6 +15,16 @@ public class User {
     public String age;
     public String userJob;
 
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
+    public String birthday;
+
     public int getIdUser() {
         return idUser;
     }
