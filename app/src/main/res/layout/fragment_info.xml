@@ -198,6 +198,7 @@
                 android:text="benh ly:"
                 android:textStyle="bold"/>
             <TextView
+                android:id="@+id/benhly"
                 android:layout_marginLeft="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
@@ -218,6 +219,7 @@
                 android:text="tieu su:"
                 android:textStyle="bold"/>
             <TextView
+                android:id="@+id/tieusu"
                 android:layout_marginLeft="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"

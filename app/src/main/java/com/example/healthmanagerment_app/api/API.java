@@ -28,4 +28,7 @@ public interface API {
 
     @POST("api/datlich")
     Call<Data> order(@Body Order order);
+
+    @POST("api/update")
+    Call<Data> uploaduser(@Body User user);
 }

@@ -44,9 +44,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="text"
+            android:hint="Name"
 
-            android:hint="Name"/>
+            android:inputType="text" />
 
     </LinearLayout>
     <LinearLayout
@@ -188,7 +188,7 @@
             android:text="Can nang:"
             android:textStyle="bold"/>
         <EditText
-            android:id="@+id/editcao"
+            android:id="@+id/editcannang"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -209,7 +209,7 @@
             android:text="benh ly:"
             android:textStyle="bold"/>
         <EditText
-            android:id="@+id/editnang"
+            android:id="@+id/editbenhly"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -245,6 +245,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <Button
+            android:id="@+id/btnuploaduser"
             android:layout_marginLeft="50dp"
             android:layout_width="150dp"
             android:layout_height="50dp"

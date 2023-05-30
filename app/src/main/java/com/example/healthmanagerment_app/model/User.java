@@ -15,6 +15,25 @@ public class User {
     public String age;
     public String userJob;
 
+    public String getBenhly() {
+        return benhly;
+    }
+
+    public void setBenhly(String benhly) {
+        this.benhly = benhly;
+    }
+
+    public String getTieusu() {
+        return tieusu;
+    }
+
+    public void setTieusu(String tieusu) {
+        this.tieusu = tieusu;
+    }
+
+    public String benhly;
+    public String tieusu;
+
     public String getBirthday() {
         return birthday;
     }
