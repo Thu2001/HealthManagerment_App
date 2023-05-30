@@ -29,7 +29,7 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="50dp"
         >
         <TextView
             android:layout_marginLeft="15dp"
@@ -39,13 +39,15 @@
             android:layout_gravity="center_horizontal"
             android:text="Ten:"
             android:textStyle="bold"/>
-        <EditText
-            android:id="@+id/uploadname"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
 
-            />
+        <EditText
+            android:id="@+id/editTextText3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Name" />
 
     </LinearLayout>
     <LinearLayout
@@ -59,12 +61,15 @@
             android:layout_height="20dp"
             android:text="Tuoi:"
             android:textStyle="bold"/>
-        <TextView
-            android:layout_marginLeft="15dp"
-            android:layout_width="match_parent"
+        <EditText
+            android:id="@+id/editTextText555"
+            android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:hint=" nhap tuoi"
-            android:textStyle="bold"/>
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Name" />
+
 
     </LinearLayout>
     <LinearLayout

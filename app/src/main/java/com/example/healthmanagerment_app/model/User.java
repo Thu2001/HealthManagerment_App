@@ -3,39 +3,17 @@ package com.example.healthmanagerment_app.model;
 public class User {
     public int idUser;
     public String Account;
-    public Object userEmail;
+    public String userEmail;
     public String Password;
-    public Object userDate;
-    public Object userName;
-    public Object userPhone;
-    public Object userAddress;
-    public Object userHeight;
-    public Object userWeight;
-    public Object refreshToken;
-    public Object age;
-    public Object getUserJob() {
-        return userJob;
-    }
-
-    public void setUserJob(Object userJob) {
-        this.userJob = userJob;
-    }
-
-    public Object userJob;
-
-
-
-
-
-    public Object getAge() {
-        return age;
-    }
-
-    public void setAge(Object age) {
-        this.age = age;
-    }
-
-
+    public String userDate;
+    public String userName;
+    public String userPhone;
+    public String userAddress;
+    public String userHeight;
+    public String userWeight;
+    public String refreshToken;
+    public String age;
+    public String userJob;
 
     public int getIdUser() {
         return idUser;
@@ -53,11 +31,11 @@ public class User {
         Account = account;
     }
 
-    public Object getUserEmail() {
+    public String getUserEmail() {
         return userEmail;
     }
 
-    public void setUserEmail(Object userEmail) {
+    public void setUserEmail(String userEmail) {
         this.userEmail = userEmail;
     }
 
@@ -69,59 +47,75 @@ public class User {
         Password = password;
     }
 
-    public Object getUserDate() {
+    public String getUserDate() {
         return userDate;
     }
 
-    public void setUserDate(Object userDate) {
+    public void setUserDate(String userDate) {
         this.userDate = userDate;
     }
 
-    public Object getUserName() {
+    public String getUserName() {
         return userName;
     }
 
-    public void setUserName(Object userName) {
+    public void setUserName(String userName) {
         this.userName = userName;
     }
 
-    public Object getUserPhone() {
+    public String getUserPhone() {
         return userPhone;
     }
 
-    public void setUserPhone(Object userPhone) {
+    public void setUserPhone(String userPhone) {
         this.userPhone = userPhone;
     }
 
-    public Object getUserAddress() {
+    public String getUserAddress() {
         return userAddress;
     }
 
-    public void setUserAddress(Object userAddress) {
+    public void setUserAddress(String userAddress) {
         this.userAddress = userAddress;
     }
 
-    public Object getUserHeight() {
+    public String getUserHeight() {
         return userHeight;
     }
 
-    public void setUserHeight(Object userHeight) {
+    public void setUserHeight(String userHeight) {
         this.userHeight = userHeight;
     }
 
-    public Object getUserWeight() {
+    public String getUserWeight() {
         return userWeight;
     }
 
-    public void setUserWeight(Object userWeight) {
+    public void setUserWeight(String userWeight) {
         this.userWeight = userWeight;
     }
 
-    public Object getRefreshToken() {
+    public String getRefreshToken() {
         return refreshToken;
     }
 
-    public void setRefreshToken(Object refreshToken) {
+    public void setRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public String getUserJob() {
+        return userJob;
+    }
+
+    public void setUserJob(String userJob) {
+        this.userJob = userJob;
     }
 }
