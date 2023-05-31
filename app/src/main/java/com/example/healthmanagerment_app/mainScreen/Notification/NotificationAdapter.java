@@ -13,14 +13,15 @@ import com.example.healthmanagerment_app.R;
 import com.example.healthmanagerment_app.donthuoc.DonThuocAdapter;
 import com.example.healthmanagerment_app.mainScreen.list.donthuoc;
 import com.example.healthmanagerment_app.model.ResponeNotification;
+import com.example.healthmanagerment_app.model.RpCalender;
 
 import java.util.ArrayList;
 
 public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapter.ViewHolder> {
     private Context mContext;
-    private ArrayList<ResponeNotification.Notification> mHeros;
+    private ArrayList<RpCalender.Calender> mHeros;
 
-    public NotificationAdapter(Context mContext, ArrayList<ResponeNotification.Notification> mHeros) {
+    public NotificationAdapter(Context mContext, ArrayList<RpCalender.Calender> mHeros) {
         this.mContext = mContext;
         this.mHeros = mHeros;
     }
@@ -36,11 +37,11 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        ResponeNotification.Notification hero = mHeros.get(position);
+        RpCalender.Calender hero = mHeros.get(position);
 //        Glide.with(mContext)
 //                .load(hero.getImage())
 //                .into(holder.mImageHero);
-        holder.mTextName.setText(hero.name);
+        holder.mTextName.setText(hero.putDate);
     }
 
     @Override
@@ -52,7 +53,7 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            mTextName = itemView.findViewById(R.id.notification);
+            mTextName = itemView.findViewById(R.id.date);
         }
     }
 }

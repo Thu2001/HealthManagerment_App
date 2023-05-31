@@ -16,6 +16,7 @@ import com.example.healthmanagerment_app.api.RetrofitClient;
 import com.example.healthmanagerment_app.donthuoc.DonThuocAdapter;
 import com.example.healthmanagerment_app.model.ResponeNotification;
 import com.example.healthmanagerment_app.model.ResponePrescription;
+import com.example.healthmanagerment_app.model.RpCalender;
 import com.example.healthmanagerment_app.model.User;
 
 import java.util.ArrayList;
@@ -40,14 +41,14 @@ public class notification extends Fragment {
         User user = new User();
         user.setAccount("1");
         API methods = RetrofitClient.getRetrofit().create(API.class);
-        Call<ResponeNotification> call = methods.getListNotification(user);
-        call.enqueue(new Callback<ResponeNotification>() {
+        Call<RpCalender> call = methods.getListNotification(user);
+        call.enqueue(new Callback<RpCalender>() {
             @Override
-            public void onResponse(Call<ResponeNotification> call, Response<ResponeNotification> response) {
-                ResponeNotification data = response.body();
+            public void onResponse(Call<RpCalender> call, Response<RpCalender> response) {
+                RpCalender data = response.body();
 
-                ArrayList<ResponeNotification.Notification> listdonThuoc = new ArrayList<>();
-                for (ResponeNotification.Notification dt:data.data
+                ArrayList<RpCalender.Calender> listdonThuoc = new ArrayList<>();
+                for (RpCalender.Calender dt:data.data
                 ) {
                     listdonThuoc.add(dt);
                 }
@@ -58,7 +59,7 @@ public class notification extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<ResponeNotification> call, Throwable t) {
+            public void onFailure(Call<RpCalender> call, Throwable t) {
 
             }
         });

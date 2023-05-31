@@ -4,6 +4,7 @@ import com.example.healthmanagerment_app.chitietthuoc.thongtinthuoc;
 import com.example.healthmanagerment_app.model.Order;
 import com.example.healthmanagerment_app.model.ResponeNotification;
 import com.example.healthmanagerment_app.model.ResponePrescription;
+import com.example.healthmanagerment_app.model.RpCalender;
 import com.example.healthmanagerment_app.model.Token;
 import com.example.healthmanagerment_app.model.User;
 import com.example.healthmanagerment_app.model.Data;
@@ -25,7 +26,7 @@ public interface API {
     Call<ResponePrescription> getListPrescription(@Body User user);
 
     @POST("api/listNoti")
-    Call<ResponeNotification> getListNotification(@Body User user);
+    Call<RpCalender> getListNotification(@Body User user);
 
     @POST("api/datlich")
     Call<Data> order(@Body Order order);
