@@ -51,8 +51,8 @@ public class viewThuoc extends AppCompatActivity {
                 ) {
                     listdonThuoc.add(dt);
                 }
-                ThuocAdapter thuocAdapter = new ThuocAdapter(this,listdonThuoc);
-                LinearLayoutManager LinearLayoutManager=new LinearLayoutManager(this, RecyclerView.VERTICAL,false);
+                ThuocAdapter thuocAdapter = new ThuocAdapter(viewThuoc.this,listdonThuoc);
+                LinearLayoutManager LinearLayoutManager=new LinearLayoutManager(viewThuoc.this, RecyclerView.VERTICAL,false);
                 rcvthuoc.setLayoutManager(LinearLayoutManager);
                 rcvthuoc.setAdapter(thuocAdapter);
             }
