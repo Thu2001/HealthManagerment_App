@@ -1,4 +1,4 @@
-package com.example.healthmanagerment_app.mainScreen.notification;
+package com.example.healthmanagerment_app.mainScreen.Notification;
 
 import android.os.Bundle;
 
@@ -13,9 +13,6 @@ import android.view.ViewGroup;
 import com.example.healthmanagerment_app.R;
 import com.example.healthmanagerment_app.api.API;
 import com.example.healthmanagerment_app.api.RetrofitClient;
-import com.example.healthmanagerment_app.donthuoc.DonThuocAdapter;
-import com.example.healthmanagerment_app.model.ResponeNotification;
-import com.example.healthmanagerment_app.model.ResponePrescription;
 import com.example.healthmanagerment_app.model.RpCalender;
 import com.example.healthmanagerment_app.model.User;
 

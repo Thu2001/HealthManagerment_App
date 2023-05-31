@@ -1,4 +1,4 @@
-package com.example.healthmanagerment_app.mainScreen.notification;
+package com.example.healthmanagerment_app.mainScreen.Notification;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,9 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.healthmanagerment_app.R;
-import com.example.healthmanagerment_app.donthuoc.DonThuocAdapter;
-import com.example.healthmanagerment_app.mainScreen.list.donthuoc;
-import com.example.healthmanagerment_app.model.ResponeNotification;
 import com.example.healthmanagerment_app.model.RpCalender;
 
 import java.util.ArrayList;

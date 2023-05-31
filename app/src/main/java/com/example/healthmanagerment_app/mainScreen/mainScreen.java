@@ -2,22 +2,17 @@ package com.example.healthmanagerment_app.mainScreen;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.Menu;
 
 import com.example.healthmanagerment_app.R;
 import com.example.healthmanagerment_app.mainScreen.home.Home;
 import com.example.healthmanagerment_app.mainScreen.list.list;
-import com.example.healthmanagerment_app.mainScreen.notification.notification;
+import com.example.healthmanagerment_app.mainScreen.Notification.notification;
 import com.example.healthmanagerment_app.mainScreen.info.info;
 import com.example.healthmanagerment_app.mainScreen.orderDate.orderDate;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.healthmanagerment_app.databinding.ActivityMainScreenBinding;
 
 public class mainScreen extends AppCompatActivity implements BottomNavigationView
         .OnNavigationItemSelectedListener{
