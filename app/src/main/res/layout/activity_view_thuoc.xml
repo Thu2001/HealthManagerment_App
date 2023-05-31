@@ -30,6 +30,11 @@
             android:orientation="horizontal"
             android:layout_marginTop="20dp">
             <TextView
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:text="Ten benh nhan"
+                android:layout_marginLeft="1dp"/>
+            <TextView
                 android:id="@+id/usernamehome"
                 android:layout_width="180dp"
                 android:layout_height="20dp"

@@ -10,22 +10,22 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.healthmanagerment_app.R;
 import com.example.healthmanagerment_app.chitietthuoc.chitietthuoc;
-import com.example.healthmanagerment_app.mainScreen.info.uploadinfo.uploadinfo1;
-import com.example.healthmanagerment_app.mainScreen.mainScreen;
+import com.example.healthmanagerment_app.chitietthuoc.thongtinthuoc;
 
 import java.util.ArrayList;
+
+import retrofit2.Callback;
 
 public class ThuocAdapter extends RecyclerView.Adapter<ThuocAdapter.ViewHolder> {
 
     private Context mContext;
-    private ArrayList<thuoc> mHeros;
+    private ArrayList<thongtinthuoc.Thongtinthuoc> mHeros;
 
-    public ThuocAdapter(Context mContext, ArrayList<thuoc> mHeros) {
+    public ThuocAdapter(Context mContext, ArrayList<thongtinthuoc.Thongtinthuoc> mHeros) {
         this.mContext = mContext;
         this.mHeros = mHeros;
     }
@@ -40,11 +40,11 @@ public class ThuocAdapter extends RecyclerView.Adapter<ThuocAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        thuoc hero = mHeros.get(position);
+        thongtinthuoc.Thongtinthuoc hero = mHeros.get(position);
 //        Glide.with(mContext)
 //                .load(hero.getImage())
 //                .into(holder.mImageHero);
-        holder.mTextName.setText(hero.getTenthuoc());
+        holder.mTextName.setText(hero.getNameT());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

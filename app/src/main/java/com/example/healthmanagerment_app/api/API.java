@@ -34,4 +34,7 @@ public interface API {
     Call<Data> uploaduser(@Body User user);
     @POST("api/getmedicune")
     Call<thongtinthuoc> chitietthuoc(@Body thongtinthuoc.Thongtinthuoc Thongtinthuoc);
+    @POST("api/getListThuoc")
+    Call<thongtinthuoc> getListThuoc(@Body ResponePrescription.Prescription listthuoc);
+
 }
