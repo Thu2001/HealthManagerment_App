@@ -81,7 +81,8 @@
                     android:text="Khám dịch vụ"
                     android:textStyle="bold"/>
                 <TextView
-                    android:layout_width="100dp"
+                    android:id="@+id/khoa1"
+                    android:layout_width="match_parent"
                     android:layout_height="20dp"
                     android:text="Khám tổng quát"
                     />
@@ -117,7 +118,8 @@
                 android:text="Thời gian khám"
                 android:textStyle="bold"/>
             <TextView
-                android:layout_width="100dp"
+                android:id="@+id/ngay"
+                android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:text="Thứ 2, 6:30-30/05/2023"
                 />
@@ -130,6 +132,7 @@
 
     </LinearLayout>
     <Button
+        android:id="@+id/home2"
         android:layout_width="120dp"
         android:layout_height="60dp"
         android:text="quay về trang chủ"

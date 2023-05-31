@@ -10,9 +10,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.healthmanagerment_app.R;
@@ -36,6 +39,8 @@ public class orderDate extends Fragment {
     TimeManagement mTimeManagement;
 
     Button order;
+    CheckBox oder1;
+    Spinner sp1;
     private int mYear, mMonth, mDay, mHour, mMinute;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,37 +54,114 @@ public class orderDate extends Fragment {
         View view = inflater.inflate(R.layout.fragment_order_date, container, false);
 
         EditText dateTime = view.findViewById(R.id.editText_date);
-
+        CheckBox oder1=view.findViewById(R.id.checkBox_isSpinnerMode);
         order = view.findViewById(R.id.button_order);
-
+        Spinner spinner = (Spinner) view.findViewById(R.id.spn_khoa);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.planets_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
         final Calendar c = Calendar.getInstance();
         dateTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final Calendar c = Calendar.getInstance();
-                mYear = c.get(Calendar.YEAR);
-                mMonth = c.get(Calendar.MONTH);
-                mDay = c.get(Calendar.DAY_OF_MONTH);
+                if(oder1.isChecked()){
+                    int selectedYear = 2000;
+                    int selectedMonth = 5;
+                    int selectedDayOfMonth = 10;
 
-                DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(),
-                        new DatePickerDialog.OnDateSetListener() {
+// Date Select Listener.
+                    DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
 
-                            @Override
-                            public void onDateSet(DatePicker view, int year,
-                                                  int monthOfYear, int dayOfMonth) {
+                        @Override
+                        public void onDateSet(DatePicker view, int year,
+                                              int monthOfYear, int dayOfMonth) {
 
-                                dateTime.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+                            dateTime.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+                        }
+                    };
 
-                            }
-                        }, mYear, mMonth, mDay);
-                datePickerDialog.show();
+// Create DatePickerDialog (Spinner Mode):
+                    DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(),
+                            android.R.style.Theme_Holo_Light_Dialog_NoActionBar,
+                            dateSetListener, selectedYear, selectedMonth, selectedDayOfMonth);
+
+// Show
+                    datePickerDialog.show();
+                } else {
+                    final Calendar c = Calendar.getInstance();
+                    mYear = c.get(Calendar.YEAR);
+                    mMonth = c.get(Calendar.MONTH);
+                    mDay = c.get(Calendar.DAY_OF_MONTH);
+
+                    DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(),
+                            new DatePickerDialog.OnDateSetListener() {
+
+                                @Override
+                                public void onDateSet(DatePicker view, int year,
+                                                      int monthOfYear, int dayOfMonth) {
+
+                                    dateTime.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+
+                                }
+                            }, mYear, mMonth, mDay);
+                    datePickerDialog.show();
+                }
             }
         });
 
+        Button button2=view.findViewById(R.id.button_date);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(oder1.isChecked()){
+                    int selectedYear = 2000;
+                    int selectedMonth = 5;
+                    int selectedDayOfMonth = 10;
+
+// Date Select Listener.
+                    DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
+
+                        @Override
+                        public void onDateSet(DatePicker view, int year,
+                                              int monthOfYear, int dayOfMonth) {
+
+                            dateTime.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+                        }
+                    };
+
+// Create DatePickerDialog (Spinner Mode):
+                    DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(),
+                            android.R.style.Theme_Holo_Light_Dialog_NoActionBar,
+                            dateSetListener, selectedYear, selectedMonth, selectedDayOfMonth);
+
+// Show
+                    datePickerDialog.show();
+                } else {
+                    final Calendar c = Calendar.getInstance();
+                    mYear = c.get(Calendar.YEAR);
+                    mMonth = c.get(Calendar.MONTH);
+                    mDay = c.get(Calendar.DAY_OF_MONTH);
+
+                    DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(),
+                            new DatePickerDialog.OnDateSetListener() {
+
+                                @Override
+                                public void onDateSet(DatePicker view, int year,
+                                                      int monthOfYear, int dayOfMonth) {
+
+                                    dateTime.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+
+                                }
+                            }, mYear, mMonth, mDay);
+                    datePickerDialog.show();
+                }
+            }
+        });
         order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Order order1 = new Order();
+                order1.setFaculty(spinner.getSelectedItem().toString());
                 order1.setPutDate(dateTime.getText().toString());
                 Log.v("abcd",new Gson().toJson(order1));
                 API methods = RetrofitClient.getRetrofit().create(API.class);
@@ -100,6 +182,8 @@ public class orderDate extends Fragment {
 
 
                     Intent intent = new Intent(getActivity(), registration.class);
+                    intent.putExtra("spinner",spinner.getSelectedItem().toString());
+                    intent.putExtra("dateTime",dateTime.getText().toString());
                     getActivity().startActivity(intent);
 
             }

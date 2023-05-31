@@ -23,7 +23,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Home extends Fragment {
-    TextView name;
+    TextView name,loichao;
     @SuppressLint("MissingInflatedId")
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,6 +39,7 @@ public class Home extends Fragment {
         User user = new User();
         user.setAccount("1");
         Log.v("aaaaaaaaa",new Gson().toJson(user));
+        TextView textView=view.findViewById(R.id.loichao);
 
         API methods = RetrofitClient.getRetrofit().create(API.class);
 

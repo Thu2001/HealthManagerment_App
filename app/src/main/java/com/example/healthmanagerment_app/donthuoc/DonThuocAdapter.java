@@ -48,6 +48,7 @@ public class DonThuocAdapter extends RecyclerView.Adapter<DonThuocAdapter.ViewHo
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(mContext, viewThuoc.class);
+                intent.putExtra("idPres",hero.getIdPres());
                 mContext.startActivity(intent);
             }
         });

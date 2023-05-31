@@ -31,13 +31,16 @@
         tools:context=".MainActivity">
 
         <TextView
-            android:layout_width="100dp"
+            android:id="@+id/textView4"
+            android:layout_width="150dp"
             android:layout_height="25dp"
-            android:layout_marginTop="136dp"
+            android:layout_marginTop="128dp"
+            android:gravity="center"
             android:text="Khám Dịch Vụ"
             android:textSize="16dp"
-            app:layout_constraintEnd_toStartOf="@+id/spn_khoa"
-            app:layout_constraintHorizontal_bias="0.347"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,17 +48,17 @@
             android:id="@+id/spn_khoa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="136dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
         <EditText
             android:id="@+id/editText_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="48dp"
             android:ems="10"
             android:inputType="date"
             app:layout_constraintEnd_toEndOf="parent"
@@ -67,19 +70,19 @@
             android:id="@+id/button_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="96dp"
             android:text="Select Date"
-            app:layout_constraintStart_toEndOf="@+id/checkBox_isSpinnerMode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText_date" />
 
         <CheckBox
             android:id="@+id/checkBox_isSpinnerMode"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="60dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="21dp"
             android:text="Spinner Mode?"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText_date" />
 
@@ -87,14 +90,14 @@
             android:id="@+id/button_order"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="76dp"
+            android:layout_marginTop="80dp"
             android:background="@drawable/custom_buton"
             android:text="Đặt lịch"
             android:textSize="20dp"
 
             app:backgroundTint="@null"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.563"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button_date" />
 

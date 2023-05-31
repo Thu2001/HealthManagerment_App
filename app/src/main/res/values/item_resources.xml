@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="planets_array">
+        <item>Hoạt động trị liệu</item>
+        <item>Ngoại Tim mạch</item>
+        <item>Nội Hô hấp</item>
+        <item>Ngoại Hô hấp</item>
+        <item>Nội Thận - Tiết niệu</item>
+        <item>Ngoại Thận - Tiết niệu</item>
+    </string-array>
+</resources>
