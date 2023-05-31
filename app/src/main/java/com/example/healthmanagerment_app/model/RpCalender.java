@@ -11,5 +11,6 @@ public class RpCalender {
         public String putDate;
         public Object upDate;
         public String userCode;
+        public String faculty;
     }
 }

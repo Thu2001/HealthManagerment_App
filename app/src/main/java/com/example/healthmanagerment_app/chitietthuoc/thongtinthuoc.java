@@ -18,6 +18,15 @@ public class thongtinthuoc {
         public String dosageT;
         public String ngaySXT;
         public String ngayHHT;
+        public String soluong;
+
+        public String getSoluong() {
+            return soluong;
+        }
+
+        public void setSoluong(String soluong) {
+            this.soluong = soluong;
+        }
 
         public int getIdT() {
             return idT;

@@ -163,6 +163,7 @@ public class orderDate extends Fragment {
                 Order order1 = new Order();
                 order1.setFaculty(spinner.getSelectedItem().toString());
                 order1.setPutDate(dateTime.getText().toString());
+                order1.setUserCode("1");
                 Log.v("abcd",new Gson().toJson(order1));
                 API methods = RetrofitClient.getRetrofit().create(API.class);
                 Call<Data> call = methods.order(order1);

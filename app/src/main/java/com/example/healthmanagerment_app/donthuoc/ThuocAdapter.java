@@ -45,6 +45,9 @@ public class ThuocAdapter extends RecyclerView.Adapter<ThuocAdapter.ViewHolder> 
 //                .load(hero.getImage())
 //                .into(holder.mImageHero);
         holder.mTextName.setText(hero.getNameT());
+        holder.mluuluong.setText(hero.getDosageT());
+        holder.msoluong.setText(hero.getSoluong());
+
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,11 +64,13 @@ public class ThuocAdapter extends RecyclerView.Adapter<ThuocAdapter.ViewHolder> 
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView mTextName;
+        public TextView mTextName,mluuluong,msoluong;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             mTextName = itemView.findViewById(R.id.txttenthuoc);
+            mluuluong = itemView.findViewById(R.id.txtlieuluongdung);
+            msoluong = itemView.findViewById(R.id.txtsoluongthuoc);
         }
     }
 }

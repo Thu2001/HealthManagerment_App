@@ -107,9 +107,9 @@
             <TextView
                 android:id="@+id/lieudungthuoc"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="20dp"
                 android:textSize="14dp"
-                android:text="Người lớn (kể cả người cao tuổi) và trẻ em từ 12 tuổi trở lên: uống 1 hoặc 2 viên mỗi 4 đến 6 giờ nếu cần. Liều tối đa hàng ngày: 8 viên."
+                android:text="3 vien"
                 android:layout_marginLeft="10dp"
                 android:autoSizeTextType="uniform"
                 />

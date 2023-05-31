@@ -1,7 +1,15 @@
 package com.example.healthmanagerment_app.model;
 
 public class Order {
-    String putDate,faculty;
+    String putDate,faculty,codeUser;
+
+    public String getUserCode() {
+        return codeUser;
+    }
+
+    public void setUserCode(String userCode) {
+        this.codeUser = userCode;
+    }
 
     public String getFaculty() {
         return faculty;

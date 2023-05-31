@@ -1,6 +1,7 @@
 package com.example.healthmanagerment_app.mainScreen.Notification;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.healthmanagerment_app.R;
+import com.example.healthmanagerment_app.mainScreen.orderDate.registration.registration;
 import com.example.healthmanagerment_app.model.RpCalender;
 
 import java.util.ArrayList;
@@ -39,6 +41,15 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
 //                .load(hero.getImage())
 //                .into(holder.mImageHero);
         holder.mTextName.setText(hero.putDate);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, registration.class);
+                intent.putExtra("spinner",hero.faculty);
+                intent.putExtra("dateTime",hero.putDate);
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     @Override
