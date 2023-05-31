@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chitietthuoc.chitietthuoc"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/custom_background_1"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        android:id="@+id/panner1">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="chi tiet thuoc"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/custom_bable1">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/anhthuoc"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/logo2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="Ten thuoc"
+                android:textStyle="bold"
+                android:textSize="16dp"/>
+            <TextView
+                android:id="@+id/tenthuoc"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="ten thuoc"
+                android:layout_marginLeft="10dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="noi san xuat"
+                android:textStyle="bold"
+                android:textSize="16dp"/>
+            <TextView
+                android:id="@+id/noiSX"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="Teen cong ty"
+                android:layout_marginLeft="10dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="Dia chi"
+                android:textStyle="bold"
+                android:textSize="16dp"/>
+            <TextView
+                android:id="@+id/addressT"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="dia chi cong ty"
+                android:layout_marginLeft="10dp"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="Cong dungj"
+                android:textStyle="bold"
+                android:textSize="16dp"/>
+            <TextView
+                android:id="@+id/congdungthuoc"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:autoSizeTextType="uniform"
+                android:textSize="14dp"
+                android:text="Thuốc được khuyến cáo để điều trị hầu hết các triệu chứng đau từ nhẹ đến vừa và hạ sốt, ví dụ như: Đau đầu, đau nửa đầu, đau lưng, đau răng, đau khớp, đau bụng kinh, giảm các triệu chứng cảm lạnh, cảm cúm và đau họng."
+                android:layout_marginLeft="10dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="lieu dung"
+                android:textStyle="bold"
+                android:textSize="16dp"/>
+            <TextView
+                android:id="@+id/lieudungthuoc"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textSize="14dp"
+                android:text="Người lớn (kể cả người cao tuổi) và trẻ em từ 12 tuổi trở lên: uống 1 hoặc 2 viên mỗi 4 đến 6 giờ nếu cần. Liều tối đa hàng ngày: 8 viên."
+                android:layout_marginLeft="10dp"
+                android:autoSizeTextType="uniform"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="ngay san xuat"
+                android:textStyle="bold"
+                android:textSize="16dp"/>
+            <TextView
+                android:id="@+id/ngaySXT"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="ngay"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="ngay het han"
+                android:textStyle="bold"
+                android:textSize="16dp"/>
+            <TextView
+                android:id="@+id/ngayHHT"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="ngay"
+                android:layout_marginLeft="10dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

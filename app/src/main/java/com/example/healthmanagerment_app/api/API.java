@@ -1,5 +1,6 @@
 package com.example.healthmanagerment_app.api;
 
+import com.example.healthmanagerment_app.chitietthuoc.thongtinthuoc;
 import com.example.healthmanagerment_app.model.Order;
 import com.example.healthmanagerment_app.model.ResponeNotification;
 import com.example.healthmanagerment_app.model.ResponePrescription;
@@ -31,4 +32,6 @@ public interface API {
 
     @POST("api/update")
     Call<Data> uploaduser(@Body User user);
+    @POST("api/getmedicune")
+    Call<thongtinthuoc> chitietthuoc(@Body thongtinthuoc.Thongtinthuoc Thongtinthuoc);
 }

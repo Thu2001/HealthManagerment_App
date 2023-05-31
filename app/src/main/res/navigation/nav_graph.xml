@@ -44,5 +44,15 @@
         android:name="com.example.healthmanagerment_app.mainScreen.info.uploadinfo.uploadinfo"
         android:label="fragment_uploadinfo"
         tools:layout="@layout/fragment_uploadinfo" />
+    <fragment
+        android:id="@+id/chitietthuoc"
+        android:name="com.example.healthmanagerment_app.chitietthuoc.chitietthuoc"
+        android:label="fragment_chitietthuoc"
+        tools:layout="@layout/fragment_chitietthuoc" />
+    <activity
+        android:id="@+id/viewThuoc"
+        android:name="com.example.healthmanagerment_app.donthuoc.viewThuoc"
+        android:label="activity_view_thuoc"
+        tools:layout="@layout/activity_view_thuoc" />
 
 </navigation>

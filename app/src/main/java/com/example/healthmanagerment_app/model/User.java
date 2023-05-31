@@ -33,7 +33,7 @@ public class User {
 
     public String benhly;
     public String tieusu;
-
+    public String birthday;
     public String getBirthday() {
         return birthday;
     }
@@ -41,8 +41,6 @@ public class User {
     public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
-
-    public String birthday;
 
     public int getIdUser() {
         return idUser;

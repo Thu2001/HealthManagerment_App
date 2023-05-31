@@ -1,16 +1,22 @@
 package com.example.healthmanagerment_app.donthuoc;
 
+import static android.app.PendingIntent.getActivity;
+
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.healthmanagerment_app.R;
-import com.example.healthmanagerment_app.model.ResponePrescription;
+import com.example.healthmanagerment_app.chitietthuoc.chitietthuoc;
+import com.example.healthmanagerment_app.mainScreen.info.uploadinfo.uploadinfo1;
+import com.example.healthmanagerment_app.mainScreen.mainScreen;
 
 import java.util.ArrayList;
 
@@ -39,6 +45,14 @@ public class ThuocAdapter extends RecyclerView.Adapter<ThuocAdapter.ViewHolder> 
 //                .load(hero.getImage())
 //                .into(holder.mImageHero);
         holder.mTextName.setText(hero.getTenthuoc());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, chitietthuoc.class);
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     @Override
