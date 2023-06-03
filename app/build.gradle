@@ -59,4 +59,8 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
     apply plugin:'com.android.application'
 
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+
+    coreLibraryDesugaring'com.android.tools:desugar_jdk_libs:2.0.3'
+    implementation 'androidx.multidex:multidex:2.0.1'
 }
