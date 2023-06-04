@@ -26,7 +26,9 @@ public class uploadinfo1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_uploadinfo1);
+        Bundle extras = getIntent().getExtras();
 
+        String id = extras.getString("acc");
         Button uploaduser= findViewById(R.id.btnuploaduser);
         username = findViewById(R.id.editname);
         age = findViewById(R.id.edituoi);
@@ -39,7 +41,7 @@ public class uploadinfo1 extends AppCompatActivity {
         benhly = findViewById(R.id.editbenhly);
         tieusu = findViewById(R.id.edittieusu);
         User user = new User();
-        user.setAccount("1");
+        user.setAccount(id);
         Log.v("aaaaaaaaa",new Gson().toJson(user));
 
         API methods = RetrofitClient.getRetrofit().create(API.class);
@@ -49,16 +51,77 @@ public class uploadinfo1 extends AppCompatActivity {
             @Override
             public void onResponse(Call<Data> call, Response<Data> response) {
                 Data dt = response.body();
-                username.setText(dt.data.get(0).getUserName().toString());
-                age.setText(dt.data.get(0).getAge().toString());
-                userJob.setText(dt.data.get(0).getUserJob().toString());
-                userDate.setText(dt.data.get(0).getUserDate().toString());
-                userAddress.setText(dt.data.get(0).getUserAddress().toString());
-                userPhone.setText(dt.data.get(0).getUserPhone().toString());
-                userHeight.setText(dt.data.get(0).getUserHeight().toString());
-                userWeight.setText(dt.data.get(0).getUserWeight().toString());
-                benhly.setText(dt.data.get(0).getUserWeight().toString());
-                tieusu.setText(dt.data.get(0).getUserWeight().toString());
+                if(dt.data.get(0).userName == null){
+                    username.setText("");
+                } else {
+                    if (!dt.data.get(0).userName.equals("")){
+                        username.setText(dt.data.get(0).getUserName().toString());
+                    }
+                }
+                if(dt.data.get(0).age == null){
+                    age.setText("");
+                } else {
+                    if (!dt.data.get(0).age.equals("")){
+                        age.setText(dt.data.get(0).getAge().toString());
+                    }
+                }
+                if(dt.data.get(0).userJob == null){
+                    userJob.setText("");
+                } else {
+                    if (!dt.data.get(0).getUserJob().equals("")){
+                        userJob.setText(dt.data.get(0).getUserJob().toString());
+                    }
+                }
+                if(dt.data.get(0).birthday == null){
+                    userDate.setText("");
+                } else {
+                    if (!dt.data.get(0).birthday.equals("")){
+                        userDate.setText(dt.data.get(0).getUserDate().toString());
+                    }
+                }
+                if(dt.data.get(0).userAddress == null){
+                    userAddress.setText("");
+                } else {
+                    if (!dt.data.get(0).userAddress.equals("")){
+                        userAddress.setText(dt.data.get(0).getUserAddress().toString());
+                    }
+                }
+                if(dt.data.get(0).userPhone == null){
+                    userPhone.setText("");
+                } else {
+                    if (!dt.data.get(0).userPhone.equals("")){
+                        userPhone.setText(dt.data.get(0).getUserPhone().toString());
+                    }
+                }
+
+                if(dt.data.get(0).userHeight == null){
+                    userHeight.setText("");
+                } else {
+                    if (!dt.data.get(0).userHeight.equals("")){
+                        userHeight.setText(dt.data.get(0).getUserHeight().toString());
+                    }
+                }
+                if(dt.data.get(0).userWeight == null){
+                    userWeight.setText("");
+                } else {
+                    if (!dt.data.get(0).userWeight.equals("")){
+                        userWeight.setText(dt.data.get(0).getUserWeight().toString());
+                    }
+                }
+                if(dt.data.get(0).benhly == null){
+                    benhly.setText("");
+                } else {
+                    if (!dt.data.get(0).benhly.equals("")){
+                        benhly.setText(dt.data.get(0).getUserWeight().toString());
+                    }
+                }
+                if(dt.data.get(0).tieusu == null){
+                    tieusu.setText("");
+                } else {
+                    if (!dt.data.get(0).tieusu.equals("")){
+                        tieusu.setText(dt.data.get(0).getTieusu().toString());
+                    }
+                }
             }
 
             @Override
@@ -71,7 +134,7 @@ public class uploadinfo1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 User user = new User();
-                user.setAccount("1");
+                user.setAccount(id);
                 user.setUserName(username.getText().toString());
                 user.setAge(age.getText().toString());
                 user.setUserDate(userDate.getText().toString());

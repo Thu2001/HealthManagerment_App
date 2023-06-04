@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_register_to_mainScreen"
             app:destination="@id/mainScreen" />
+        <action
+            android:id="@+id/action_register_to_login2"
+            app:destination="@id/login2" />
     </fragment>
     <activity
         android:id="@+id/mainScreen"

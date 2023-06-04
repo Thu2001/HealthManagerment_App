@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mainScreen.orderDate.orderDate">
+    tools:context=".mainScreen.orderDate.orderDate"
+    android:background="@drawable/custom_bable1">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:background="@drawable/custom_background_1"
         android:orientation="horizontal"
         tools:layout_editor_absoluteX="1dp"
@@ -34,7 +35,7 @@
             android:id="@+id/textView4"
             android:layout_width="150dp"
             android:layout_height="25dp"
-            android:layout_marginTop="128dp"
+            android:layout_marginTop="80dp"
             android:gravity="center"
             android:text="Khám Dịch Vụ"
             android:textSize="16dp"
@@ -72,6 +73,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="96dp"
             android:text="Select Date"
+            android:background="@drawable/custom_btn01"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText_date" />
@@ -91,11 +95,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
-            android:background="@drawable/custom_buton"
+            android:background="@drawable/custom_btn01"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
             android:text="Đặt lịch"
             android:textSize="20dp"
-
-            app:backgroundTint="@null"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"

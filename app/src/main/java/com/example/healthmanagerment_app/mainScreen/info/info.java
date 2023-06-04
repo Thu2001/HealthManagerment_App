@@ -63,19 +63,81 @@ public class info extends Fragment {
             @Override
             public void onResponse(Call<Data> call, Response<Data> response) {
                 Data dt = response.body();
-                name.setText(dt.data.get(0).getUserName().toString());
-                age.setText(dt.data.get(0).getAge().toString());
-                userjob.setText(dt.data.get(0).getUserJob().toString());
-                birthday.setText(dt.data.get(0).getUserDate().toString());
-                address.setText(dt.data.get(0).getUserAddress().toString());
-                phone.setText(dt.data.get(0).getUserPhone().toString());
-                height.setText(dt.data.get(0).getUserHeight().toString());
-                weight.setText(dt.data.get(0).getUserWeight().toString());
-                benhly.setText(dt.data.get(0).getUserWeight().toString());
-                tieusu.setText(dt.data.get(0).getTieusu().toString());
-//                maBN.setText(dt.data.get(0).getCodeinfouser().toString());
 
+                maBN.setText(dt.data.get(0).getCodeinfouser().toString());
+                if(dt.data.get(0).userName == null){
+                    name.setText("");
+                } else {
+                    if (!dt.data.get(0).userName.equals("")){
+                        name.setText(dt.data.get(0).getUserName().toString());
+                    }
+                }
+                if(dt.data.get(0).age == null){
+                    age.setText("");
+                } else {
+                    if (!dt.data.get(0).age.equals("")){
+                        age.setText(dt.data.get(0).getAge().toString());
+                    }
+                }
+                if(dt.data.get(0).userJob == null){
+                    userjob.setText("");
+                } else {
+                    if (!dt.data.get(0).getUserJob().equals("")){
+                        userjob.setText(dt.data.get(0).getUserJob().toString());
+                    }
+                }
+                if(dt.data.get(0).birthday == null){
+                    birthday.setText("");
+                } else {
+                    if (!dt.data.get(0).birthday.equals("")){
+                        birthday.setText(dt.data.get(0).getUserDate().toString());
+                    }
+                }
+                if(dt.data.get(0).userAddress == null){
+                    address.setText("");
+                } else {
+                    if (!dt.data.get(0).userAddress.equals("")){
+                        address.setText(dt.data.get(0).getUserAddress().toString());
+                    }
+                }
+                if(dt.data.get(0).userPhone == null){
+                    phone.setText("");
+                } else {
+                    if (!dt.data.get(0).userPhone.equals("")){
+                        phone.setText(dt.data.get(0).getUserPhone().toString());
+                    }
+                }
+
+                if(dt.data.get(0).userHeight == null){
+                    height.setText("");
+                } else {
+                    if (!dt.data.get(0).userHeight.equals("")){
+                        height.setText(dt.data.get(0).getUserHeight().toString());
+                    }
+                }
+                if(dt.data.get(0).userWeight == null){
+                    weight.setText("");
+                } else {
+                    if (!dt.data.get(0).userWeight.equals("")){
+                        weight.setText(dt.data.get(0).getUserWeight().toString());
+                    }
+                }
+                if(dt.data.get(0).benhly == null){
+                    benhly.setText("");
+                } else {
+                    if (!dt.data.get(0).benhly.equals("")){
+                        benhly.setText(dt.data.get(0).getBenhly().toString());
+                    }
+                }
+                if(dt.data.get(0).tieusu == null){
+                    tieusu.setText("");
+                } else {
+                    if (!dt.data.get(0).tieusu.equals("")){
+                        tieusu.setText(dt.data.get(0).getTieusu().toString());
+                    }
+                }
             }
+
 
 
             @Override
@@ -90,6 +152,7 @@ public class info extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), Qr_codeinfo.class);
+                intent.putExtra("acc",data);
                 getActivity().startActivity(intent);
             }
         });
@@ -100,6 +163,8 @@ public class info extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), uploadinfo1.class);
+
+                intent.putExtra("acc",data);
                 getActivity().startActivity(intent);
             }
         });

@@ -31,10 +31,11 @@ public class Qr_codeinfo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr_codeinfo);
-
+        Bundle extras = getIntent().getExtras();
+        String id = extras.getString("acc");
         qr_codeinfo= findViewById(R.id.qr_codeinfo);
         User user = new User();
-        user.setAccount("1");
+        user.setAccount(id);
         Log.v("aaaaaaaaa",new Gson().toJson(user));
 
         API methods = RetrofitClient.getRetrofit().create(API.class);

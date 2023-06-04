@@ -59,7 +59,7 @@ public class Register extends Fragment {
 
                     }
                 });
-                Navigation.findNavController(view).navigate(R.id.action_register_to_mainScreen);
+                Navigation.findNavController(view).navigate(R.id.action_register_to_login2);
             }
         });
 

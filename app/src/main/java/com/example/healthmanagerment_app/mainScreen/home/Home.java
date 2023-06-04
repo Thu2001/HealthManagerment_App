@@ -49,7 +49,14 @@ public class Home extends Fragment {
             @Override
             public void onResponse(Call<Data> call, Response<Data> response) {
                 Data dt = response.body();
-                name.setText(dt.data.get(0).getUserName().toString());
+                if(dt.data.get(0).userName == null){
+                    name.setText("Chao ban");
+                } else {
+                    if (!dt.data.get(0).userName.equals("")){
+                        name.setText(dt.data.get(0).getUserName().toString());
+                    }
+                }
+
 
             }
 

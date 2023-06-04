@@ -80,11 +80,12 @@
         <Button
 
             android:id="@+id/button123"
+            android:text="Login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
-            android:background="@drawable/custom_buton"
-            android:text="Login"
+            android:background="@drawable/custom_btn01"
+            android:textColor="@color/white"
             app:backgroundTint="@null"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"

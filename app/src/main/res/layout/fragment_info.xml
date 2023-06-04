@@ -59,224 +59,229 @@
 
 
     </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            >
-            <TextView
-                android:layout_marginLeft="15dp"
-                android:layout_width="80dp"
-                android:layout_height="20dp"
-                android:text="Ten:"
-                android:textStyle="bold"/>
-            <TextView
-                android:id="@+id/name"
-                android:layout_marginLeft="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:text="khong khong biet ten"
-                android:textStyle="bold"/>
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            >
-            <TextView
-                android:layout_marginLeft="15dp"
-                android:layout_width="80dp"
-                android:layout_height="20dp"
-                android:text="Tuoi:"
-                android:textStyle="bold"/>
-            <TextView
-                android:id="@+id/age"
-                android:layout_marginLeft="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:text="khong khong biet ten"
-                android:textStyle="bold"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            >
-            <TextView
-                android:layout_marginLeft="15dp"
-                android:layout_width="80dp"
-                android:layout_height="20dp"
-                android:text="Ngay sinh:"
-                android:textStyle="bold"/>
-            <TextView
-                android:id="@+id/birthday"
-                android:layout_marginLeft="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:text="khong khong biet ten"
-                android:textStyle="bold"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            >
-            <TextView
-                android:layout_marginLeft="15dp"
-                android:layout_width="80dp"
-                android:layout_height="20dp"
-                android:text="cong viec:"
-                android:textStyle="bold"/>
-            <TextView
-                android:id="@+id/userJob"
-                android:layout_marginLeft="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:text="khong co  "
-                android:textStyle="bold"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            >
-            <TextView
-                android:layout_marginLeft="15dp"
-                android:layout_width="80dp"
-                android:layout_height="20dp"
-                android:text="dia chi:"
-                android:textStyle="bold"/>
-            <TextView
-                android:id="@+id/address"
-                android:layout_marginLeft="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:text="khong co  "
-                android:textStyle="bold"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            >
-            <TextView
-                android:layout_marginLeft="15dp"
-                android:layout_width="80dp"
-                android:layout_height="20dp"
-                android:text="lien he:"
-                android:textStyle="bold"/>
-            <TextView
-                android:id="@+id/phone"
-                android:layout_marginLeft="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:text="000000000000  "
-                android:textStyle="bold"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            >
-            <TextView
-                android:layout_marginLeft="15dp"
-                android:layout_width="80dp"
-                android:layout_height="20dp"
-                android:text="Chieu cao:"
-                android:textStyle="bold"/>
-            <TextView
-                android:layout_marginLeft="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:text="khong khong biet ten"
-                android:id="@+id/height"
-                android:textStyle="bold"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            >
-            <TextView
-                android:layout_marginLeft="15dp"
-                android:layout_width="80dp"
-                android:layout_height="20dp"
-                android:text="Can nang:"
-                android:textStyle="bold"/>
-            <TextView
-                android:layout_marginLeft="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:text="khong khong biet ten"
-                android:id="@+id/weight"
-                android:textStyle="bold"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            >
-            <TextView
-                android:layout_marginLeft="15dp"
-                android:layout_width="80dp"
-                android:layout_height="20dp"
-                android:text="benh ly:"
-                android:textStyle="bold"/>
-            <TextView
-                android:id="@+id/benhly"
-                android:layout_marginLeft="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:text="khong khong co"
-                android:textStyle="bold"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            >
-            <TextView
-                android:layout_marginLeft="15dp"
-                android:layout_width="80dp"
-                android:layout_height="20dp"
-                android:text="tieu su:"
-                android:textStyle="bold"/>
-            <TextView
-                android:id="@+id/tieusu"
-                android:layout_marginLeft="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:text="khong co  "
-                android:textStyle="bold"/>
-
-        </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        >
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="Ten:"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/name"
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="khong khong biet ten"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        >
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="Tuoi:"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/age"
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="khong khong biet ten"
+            android:textStyle="bold"/>
 
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        >
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="Ngay sinh:"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/birthday"
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="khong khong biet ten"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        >
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="cong viec:"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/userJob"
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="khong co  "
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        >
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="dia chi:"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/address"
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="khong co  "
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        >
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="lien he:"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/phone"
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="000000000000  "
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        >
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="Chieu cao:"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="khong khong biet ten"
+            android:id="@+id/height"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        >
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="Can nang:"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="khong khong biet ten"
+            android:id="@+id/weight"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        >
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="benh ly:"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/benhly"
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="khong khong co"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        >
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="tieu su:"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tieusu"
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="khong co  "
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
             android:id="@+id/bt_qrcodeinfo"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="10dp"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:text="Qr Code"
+            android:background="@drawable/custom_btn01"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
             android:padding="5dp"/>
         <Button
             android:id="@+id/captt"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="5dp"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:text="Cap nhat TT"
+            android:background="@drawable/custom_btn01"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
             android:padding="5dp"/>
     </LinearLayout>
 
