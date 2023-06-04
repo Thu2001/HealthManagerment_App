@@ -26,7 +26,38 @@
             android:textStyle="bold"/>
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <ImageView
 
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:shapeAppearanceOverlay="@style/Circular"
+            app:srcCompat="@drawable/logo2"
+            app:strokeColor="@color/white"
+            app:strokeWidth="3dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                android:text="Mã bệnh nhân"/>
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                android:text="Thông số mã"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -228,41 +259,27 @@
 
         </LinearLayout>
     <LinearLayout
-        android:layout_marginTop="10dp"
         android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="150dp">
-        <ImageView
-            android:id="@+id/qr_codeinfo"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            app:shapeAppearanceOverlay="@style/Circular"
-            app:srcCompat="@drawable/logo2"
-            app:strokeColor="@color/white"
-            app:strokeWidth="3dp"
-            />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="20dp"
-                android:text="Mã bệnh nhân"/>
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="20dp"
-                android:text="Thông số mã"/>
-            <Button
-                android:id="@+id/captt"
-                android:layout_marginLeft="50dp"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:text="Cap nhat TT"/>
-        </LinearLayout>
 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/bt_qrcodeinfo"
+            android:layout_marginLeft="50dp"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Qr Code"
+            android:padding="5dp"/>
+        <Button
+            android:id="@+id/captt"
+            android:layout_marginLeft="50dp"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Cap nhat TT"
+            android:padding="5dp"/>
     </LinearLayout>
-        
+
+
 
 
 </LinearLayout>

@@ -37,7 +37,7 @@ import retrofit2.Response;
 
 public class info extends Fragment {
     TextView name,birthday,age,address,phone,height,weight,userjob,benhly,tieusu,text01;
-    ImageView qr_codeinfo;
+//    ImageView qr_codeinfo;
     @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -53,7 +53,7 @@ public class info extends Fragment {
         weight = view.findViewById(R.id.weight);
         benhly = view.findViewById(R.id.benhly);
         tieusu = view.findViewById(R.id.tieusu);
-        qr_codeinfo= view.findViewById(R.id.qr_codeinfo);
+//        qr_codeinfo= view.findViewById(R.id.qr_codeinfo);
         User user = new User();
         user.setAccount("1");
         Log.v("aaaaaaaaa",new Gson().toJson(user));
@@ -74,18 +74,8 @@ public class info extends Fragment {
                 height.setText(dt.data.get(0).getUserHeight().toString());
                 weight.setText(dt.data.get(0).getUserWeight().toString());
                 benhly.setText(dt.data.get(0).getUserWeight().toString());
-                tieusu.setText(dt.data.get(0).getUserWeight().toString());
-                text01.setText("text01");
+                tieusu.setText(dt.data.get(0).getTieusu().toString());
 
-                MultiFormatWriter multiFormatWriter=new MultiFormatWriter();
-                BitMatrix bitMatrix= null;
-                try {
-                    bitMatrix = multiFormatWriter.encode(text01.getText().toString(), BarcodeFormat.QR_CODE,150,150);
-                    BarcodeEncoder barcodeEncoder=new BarcodeEncoder();
-                    Bitmap bitmap=barcodeEncoder.createBitmap(bitMatrix);
-                } catch (WriterException e) {
-                    throw new RuntimeException(e);
-                }
             }
 
 
@@ -95,6 +85,16 @@ public class info extends Fragment {
             }
 
         });
+
+        Button qt_codeinfo=view.findViewById(R.id.bt_qrcodeinfo);
+        qt_codeinfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Qr_codeinfo.class);
+                getActivity().startActivity(intent);
+            }
+        });
+
 
         Button uploadTT= view.findViewById(R.id.captt);
         uploadTT.setOnClickListener(new View.OnClickListener() {

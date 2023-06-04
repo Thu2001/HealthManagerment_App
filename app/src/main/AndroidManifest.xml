@@ -16,6 +16,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".mainScreen.info.Qr_codeinfo"
+            android:exported="false" />
+        <activity
             android:name=".chitietthuoc.chitietthuoc"
             android:exported="false" />
         <activity
