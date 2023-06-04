@@ -49,6 +49,7 @@
                 android:layout_height="20dp"
                 android:text="Mã bệnh nhân"/>
             <TextView
+                android:id="@+id/codeinfouser"
                 android:layout_width="120dp"
                 android:layout_height="20dp"
                 android:text="Thông số mã"/>

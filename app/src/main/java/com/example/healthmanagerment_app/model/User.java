@@ -14,6 +14,15 @@ public class User {
     public String refreshToken;
     public String age;
     public String userJob;
+    public String codeinfouser;
+
+    public String getCodeinfouser() {
+        return codeinfouser;
+    }
+
+    public void setCodeinfouser(String codeinfouser) {
+        this.codeinfouser = codeinfouser;
+    }
 
     public String getBenhly() {
         return benhly;

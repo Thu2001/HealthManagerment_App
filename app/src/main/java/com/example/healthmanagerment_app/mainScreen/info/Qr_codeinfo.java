@@ -45,13 +45,12 @@ public class Qr_codeinfo extends AppCompatActivity {
             public void onResponse(Call<Data> call, Response<Data> response) {
                 Data dt = response.body();
                 String name = dt.data.get(0).userName;
-                String age = dt.data.get(0).age;
-                String birthday = dt.data.get(0).birthday;
+                String birthday = dt.data.get(0).getUserDate();
                 String address = dt.data.get(0).userAddress;
-                String phone = dt.data.get(0).userPhone;
+                String maBN = dt.data.get(0).codeinfouser;
 
                 StringBuilder textToSend = new StringBuilder();
-                textToSend.append("Tên: "+ name+"\ntuoi: "+age+"\nNgày Sinh: "+birthday+"\nĐịa Chỉ: "+address+"\nLiên Hệ: "+phone);
+                textToSend.append("Tên: "+ name+"|"+" patient code: "+maBN+"\nbirthday: "+birthday+"|"+" address: "+address);
                 MultiFormatWriter writer=new MultiFormatWriter();
                 try {
                     BitMatrix matrix=writer.encode(textToSend.toString(), BarcodeFormat.QR_CODE,300,300);

@@ -36,8 +36,8 @@ import retrofit2.Response;
 
 
 public class info extends Fragment {
-    TextView name,birthday,age,address,phone,height,weight,userjob,benhly,tieusu,text01;
-//    ImageView qr_codeinfo;
+    TextView name,birthday,age,address,phone,height,weight,userjob,benhly,tieusu,maBN;
+
     @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -53,7 +53,8 @@ public class info extends Fragment {
         weight = view.findViewById(R.id.weight);
         benhly = view.findViewById(R.id.benhly);
         tieusu = view.findViewById(R.id.tieusu);
-//        qr_codeinfo= view.findViewById(R.id.qr_codeinfo);
+        maBN = view.findViewById(R.id.codeinfouser);
+
         User user = new User();
         user.setAccount("1");
         Log.v("aaaaaaaaa",new Gson().toJson(user));
@@ -75,6 +76,7 @@ public class info extends Fragment {
                 weight.setText(dt.data.get(0).getUserWeight().toString());
                 benhly.setText(dt.data.get(0).getUserWeight().toString());
                 tieusu.setText(dt.data.get(0).getTieusu().toString());
+                maBN.setText(dt.data.get(0).getCodeinfouser().toString());
 
             }
 
