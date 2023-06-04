@@ -1,7 +1,19 @@
 package com.example.healthmanagerment_app.login;
 
+import static androidx.core.content.ContextCompat.getSystemService;
+
+import android.Manifest;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
@@ -15,6 +27,7 @@ import com.example.healthmanagerment_app.R;
 import com.example.healthmanagerment_app.api.API;
 import com.example.healthmanagerment_app.api.RetrofitClient;
 import com.example.healthmanagerment_app.api.ServerJWT;
+import com.example.healthmanagerment_app.mainScreen.mainScreen;
 import com.example.healthmanagerment_app.model.Token;
 import com.example.healthmanagerment_app.model.User;
 
@@ -37,6 +50,7 @@ public class login extends Fragment {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_login2_to_mainScreen);
                 User user = new User();
                 user.setAccount("1");
                 user.setPassword("1");
@@ -45,7 +59,7 @@ public class login extends Fragment {
                 call.enqueue(new Callback<Token>() {
                     @Override
                     public void onResponse(Call<Token> call, Response<Token> response) {
-                        Navigation.findNavController(view).navigate(R.id.action_login2_to_mainScreen);
+
                     }
 
                     @Override
@@ -65,6 +79,8 @@ public class login extends Fragment {
 
         return view;
     }
+
+
     public Boolean Login(String Acc,String Pas, View view){
         Boolean check =false;
 

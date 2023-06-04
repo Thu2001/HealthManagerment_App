@@ -28,6 +28,9 @@ public interface API {
     @POST("api/listNoti")
     Call<RpCalender> getListNotification(@Body User user);
 
+    @POST("api/listNoti1")
+    Call<RpCalender> getListPrescriptionNoti(@Body User user);
+
     @POST("api/datlich")
     Call<Data> order(@Body Order order);
 

@@ -34,8 +34,12 @@ public class viewThuoc extends AppCompatActivity {
         setContentView(R.layout.activity_view_thuoc);
 
         rcvthuoc=findViewById(R.id.rcv_thuoc);
-        Intent intent= getIntent();
-        String id=intent.getStringExtra("idPres");
+
+        Bundle extras = getIntent().getExtras();
+
+        String id = extras.getString("idPres");
+
+        Log.v("fff",id);
 
 
         ResponePrescription.Prescription temp = new ResponePrescription.Prescription();
