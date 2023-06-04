@@ -53,6 +53,7 @@ public class ThuocAdapter extends RecyclerView.Adapter<ThuocAdapter.ViewHolder> 
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, chitietthuoc.class);
+                intent.putExtra("codeT",hero.codeT);
                 mContext.startActivity(intent);
             }
         });

@@ -26,9 +26,13 @@ public class chitietthuoc extends AppCompatActivity {
         dosageT = findViewById(R.id.lieudungthuoc);
         ngaySXT = findViewById(R.id.ngaySXT);
         ngayHHT = findViewById(R.id.ngayHHT);
+        Bundle extras = getIntent().getExtras();
+
+        String id = extras.getString("codeT");
 
         thongtinthuoc.Thongtinthuoc thongTinthuoc = new thongtinthuoc.Thongtinthuoc();
-        thongTinthuoc.setCodeT("01HH");
+
+        thongTinthuoc.setCodeT(id);
 
         API methods = RetrofitClient.getRetrofit().create(API.class);
 
