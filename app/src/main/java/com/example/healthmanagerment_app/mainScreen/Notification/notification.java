@@ -35,8 +35,9 @@ public class notification extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_notification, container, false);
         rcv_notification=view.findViewById(R.id.rcv_thongbao);
+        String data = getArguments().getString("data");
         User user = new User();
-        user.setAccount("1");
+        user.setAccount(data);
         API methods = RetrofitClient.getRetrofit().create(API.class);
         Call<RpCalender> call = methods.getListNotification(user);
         call.enqueue(new Callback<RpCalender>() {

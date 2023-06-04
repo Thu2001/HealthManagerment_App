@@ -36,8 +36,9 @@ public class Home extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home2, container, false);
         name = view.findViewById(R.id.usernamehome);
+        String data = getArguments().getString("data");
         User user = new User();
-        user.setAccount("1");
+        user.setAccount(data);
         Log.v("aaaaaaaaa",new Gson().toJson(user));
         TextView textView=view.findViewById(R.id.loichao);
 

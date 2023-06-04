@@ -53,6 +53,7 @@ public class mainScreen extends AppCompatActivity implements BottomNavigationVie
 
     BottomNavigationView bottomNavigationView;
     info firstFragment = new info();
+
     notification secondFragment = new notification();
     orderDate thirdFragment = new orderDate();
 
@@ -65,8 +66,20 @@ public class mainScreen extends AppCompatActivity implements BottomNavigationVie
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
 
+        Bundle extras = getIntent().getExtras();
+
+        String id = extras.getString("acc");
+
+        Bundle bundle = new Bundle();
+        bundle.putString("data", id);
+        firstFragment.setArguments(bundle);
+        secondFragment.setArguments(bundle);
+        thirdFragment.setArguments(bundle);
+        homeFrament.setArguments(bundle);
+        listFragment.setArguments(bundle);
+        Log.v("acc",id);
         User user = new User();
-        user.setAccount("1");
+        user.setAccount(id);
         API methods = RetrofitClient.getRetrofit().create(API.class);
         Call<ResponePrescription> call = methods.getListPrescription(user);
         call.enqueue(new Callback<ResponePrescription>() {

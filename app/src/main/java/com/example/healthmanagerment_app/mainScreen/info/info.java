@@ -24,11 +24,6 @@ import com.example.healthmanagerment_app.mainScreen.info.uploadinfo.uploadinfo1;
 import com.example.healthmanagerment_app.model.User;
 import com.example.healthmanagerment_app.model.Data;
 import com.google.gson.Gson;
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.MultiFormatWriter;
-import com.google.zxing.WriterException;
-import com.google.zxing.common.BitMatrix;
-import com.journeyapps.barcodescanner.BarcodeEncoder;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -55,8 +50,10 @@ public class info extends Fragment {
         tieusu = view.findViewById(R.id.tieusu);
         maBN = view.findViewById(R.id.codeinfouser);
 
+        String data = getArguments().getString("data");
+
         User user = new User();
-        user.setAccount("1");
+        user.setAccount(data);
         Log.v("aaaaaaaaa",new Gson().toJson(user));
 
         API methods = RetrofitClient.getRetrofit().create(API.class);
@@ -76,7 +73,7 @@ public class info extends Fragment {
                 weight.setText(dt.data.get(0).getUserWeight().toString());
                 benhly.setText(dt.data.get(0).getUserWeight().toString());
                 tieusu.setText(dt.data.get(0).getTieusu().toString());
-                maBN.setText(dt.data.get(0).getCodeinfouser().toString());
+//                maBN.setText(dt.data.get(0).getCodeinfouser().toString());
 
             }
 

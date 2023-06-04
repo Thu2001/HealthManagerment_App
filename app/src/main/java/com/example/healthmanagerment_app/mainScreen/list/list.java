@@ -41,8 +41,9 @@ public class list extends Fragment {
         super.onCreate(savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_list, container, false);
         rcv_donthuoc=view.findViewById(R.id.rcv_donthuoc);
+        String data = getArguments().getString("data");
         User user = new User();
-        user.setAccount("1");
+        user.setAccount(data);
         API methods = RetrofitClient.getRetrofit().create(API.class);
         Call<ResponePrescription> call = methods.getListPrescription(user);
 

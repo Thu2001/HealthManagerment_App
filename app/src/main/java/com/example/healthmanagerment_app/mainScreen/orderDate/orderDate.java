@@ -52,7 +52,7 @@ public class orderDate extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_order_date, container, false);
-
+        String data = getArguments().getString("data");
         EditText dateTime = view.findViewById(R.id.editText_date);
         CheckBox oder1=view.findViewById(R.id.checkBox_isSpinnerMode);
         order = view.findViewById(R.id.button_order);
@@ -163,7 +163,7 @@ public class orderDate extends Fragment {
                 Order order1 = new Order();
                 order1.setFaculty(spinner.getSelectedItem().toString());
                 order1.setPutDate(dateTime.getText().toString());
-                order1.setUserCode("1");
+                order1.setUserCode(data);
                 Log.v("abcd",new Gson().toJson(order1));
                 API methods = RetrofitClient.getRetrofit().create(API.class);
                 Call<Data> call = methods.order(order1);
