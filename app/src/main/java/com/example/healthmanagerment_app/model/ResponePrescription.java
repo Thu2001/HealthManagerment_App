@@ -10,6 +10,15 @@ public class ResponePrescription {
         public String idPres;
         public String putDate;
         public int status;
+        public String url_link_qr_code;
+
+        public String getUrl_link_qr_code() {
+            return url_link_qr_code;
+        }
+
+        public void setUrl_link_qr_code(String url_link_qr_code) {
+            this.url_link_qr_code = url_link_qr_code;
+        }
 
         public String getNamePres() {
             return namePres;

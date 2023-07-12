@@ -124,6 +124,7 @@
                 android:text="Thứ 2, 6:30-30/05/2023"
                 />
             <TextView
+                android:id="@+id/stt"
                 android:layout_width="100dp"
                 android:layout_height="20dp"
                 android:text="Số thứ tự 05"
@@ -133,10 +134,15 @@
     </LinearLayout>
     <Button
         android:id="@+id/home2"
-        android:layout_width="120dp"
-        android:layout_height="60dp"
         android:text="quay về trang chủ"
-        android:gravity="center"
-        android:layout_gravity="center"/>
+        android:layout_marginLeft="10dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/custom_btn01"
+        android:textColor="@color/white"
+        app:backgroundTint="@null"
+        android:padding="5dp"/>/>
+
 
 </LinearLayout>

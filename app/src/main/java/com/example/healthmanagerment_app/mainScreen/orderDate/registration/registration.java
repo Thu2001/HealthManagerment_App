@@ -22,6 +22,10 @@ public class registration extends AppCompatActivity {
         Intent intent= getIntent();
         String id=intent.getStringExtra("spinner");
         String idd=intent.getStringExtra("dateTime");
+        String stt = String.valueOf(intent.getIntExtra("stt",0));
+
+        TextView stt1 = findViewById(R.id.stt);
+        stt1.setText("so thu tu:"+stt);
         khoa=findViewById(R.id.khoa1);
         ngay=findViewById(R.id.ngay);
 

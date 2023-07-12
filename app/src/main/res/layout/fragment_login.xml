@@ -25,7 +25,8 @@
             app:shapeAppearanceOverlay="@style/Circular"
             app:srcCompat="@drawable/logo2"
             app:strokeColor="@color/white"
-            app:strokeWidth="3dp" />
+            app:strokeWidth="3dp"
+            />
 
         <TextView
             android:id="@+id/textView"

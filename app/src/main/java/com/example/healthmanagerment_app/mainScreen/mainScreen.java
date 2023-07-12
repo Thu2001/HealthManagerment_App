@@ -107,7 +107,7 @@ public class mainScreen extends AppCompatActivity implements BottomNavigationVie
                 RpCalender data = response.body();
                 for (RpCalender.Calender dt:data.data
                 ) {
-                    notifi(dt.putDate,dt.faculty);
+                    notifi(dt.putDate,dt.faculty,dt.idCa);
                 }
             }
             @Override
@@ -124,12 +124,13 @@ public class mainScreen extends AppCompatActivity implements BottomNavigationVie
 
     }
 
-    private void notifi(String date,String fal){
+    private void notifi(String date,String fal, int stt){
         int requestID = (int) System.currentTimeMillis();
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher);
         Intent intent = new Intent(this, registration.class);
         intent.putExtra("spinner",fal);
         intent.putExtra("dateTime",date);
+        intent.putExtra("stt",stt);
 //        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, requestID, intent, PendingIntent.FLAG_IMMUTABLE);
         Notification notification = new NotificationCompat.Builder(this, Notifi.CHANNEL_ID)

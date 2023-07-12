@@ -3,32 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".mainScreen.list.list"
-    android:background="@drawable/custom_bable1">
-
+    tools:context=".donthuoc.qr_view_thuoc"
+    android:background="@drawable/custom_bable1"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:background="@drawable/custom_background_1"
         android:orientation="horizontal"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp"
-        android:id="@+id/panner11">
+        android:id="@+id/panner1">
         <TextView
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Danh sách đơn thuốc"
+            android:text="Qr Don Thuoc"
             android:gravity="center"
             android:textSize="20dp"
             android:textStyle="bold"/>
+
     </LinearLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcv_donthuoc"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </androidx.recyclerview.widget.RecyclerView>
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:id="@+id/qr_codeviewthuoc"/>
 
 </LinearLayout>
